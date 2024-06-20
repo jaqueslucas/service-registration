@@ -1,4 +1,3 @@
-Claro! Aqui está uma versão mais concisa do `README.md` para o seu projeto:
 
 ```markdown
 # Service Registration
@@ -7,32 +6,6 @@ Claro! Aqui está uma versão mais concisa do `README.md` para o seu projeto:
 
 This project is a service registration application using a service-oriented architecture (SOA) with a DAO (Data Access Object) design pattern. The application allows creating and listing tickets, storing them in PostgreSQL, MongoDB, and MariaDB databases. The user interface is simple and implemented with plain HTML, CSS, and JavaScript.
 
-## Project Structure
-
-```
-service-registration/
-|-- public/
-|   |-- index.html
-|   |-- styles.css
-|   |-- app.js
-|-- server/
-|   |-- src/
-|   |   |-- controllers/
-|   |   |   |-- TicketController.ts
-|   |   |-- dao/
-|   |   |   |-- UserDAO.ts
-|   |   |   |-- UserDAOPG.ts
-|   |   |   |-- UserDAOMARIA.ts
-|   |   |   |-- UserDAOMongoDB.ts
-|   |   |-- utils/
-|   |   |   |-- Logger.ts
-|   |   |-- routes/
-|   |   |   |-- TicketRoutes.ts
-|   |   |-- server.ts
-|-- package.json
-|-- tsconfig.json
-|-- README.md
-```
 
 ## Requirements
 
