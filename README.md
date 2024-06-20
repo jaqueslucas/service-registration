@@ -91,5 +91,4 @@ The user interface is located in the `public` directory and includes:
 ## License
 
 This project is licensed under the MIT License.
-```
 
