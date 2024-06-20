@@ -93,4 +93,3 @@ The user interface is located in the `public` directory and includes:
 This project is licensed under the MIT License.
 ```
 
-Este `README.md` fornece uma visão geral clara e instruções para configurar e executar o projeto, mantendo tudo simples e conciso.
