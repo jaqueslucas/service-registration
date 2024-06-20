@@ -8,9 +8,9 @@ const logger = SingletonLogger.getInstance();
 export class UserDAOMARIA implements UserDAO {
     private dbConfig = {
         user: 'root',
-        host: 'localhost',
-        database: 'p3',
-        password: 'root',
+        host: '127.0.0.1',
+        database: 'servicedesk',
+        password: '123',
         port: 3306,
     };
 

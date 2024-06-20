@@ -8,7 +8,7 @@ const logger = SingletonLogger.getInstance();
 export class UserDAOMongoDB implements UserDAO {
     private dbConfig = {
         url: 'mongodb://127.0.0.1:27017',
-        dbName: 'p3'
+        dbName: 'servicedesk'
     };
 
     async insert_ticket(natureza: string, descricao: string, provedor: string): Promise<void> {

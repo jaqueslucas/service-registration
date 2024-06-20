@@ -1,4 +1,4 @@
-
+// server/src/controllers/TicketController.ts
 import { Request, Response } from 'express';
 import { UserDAOPG } from '../dao/UserDAOPG';
 import { UserDAOMARIA } from '../dao/UserDAOMARIA';
@@ -20,6 +20,7 @@ export const createTicket = async (req: Request, res: Response) => {
         }
         res.status(201).send('Ticket created successfully');
     } catch (err) {
+        console.error('Error creating ticket', err);
         res.status(500).send('Internal server error');
     }
 };
@@ -33,6 +34,27 @@ export const listTickets = async (req: Request, res: Response) => {
         const tickets = [...pgTickets, ...mariaTickets, ...mongoTickets];
         res.json(tickets);
     } catch (err) {
+        console.error('Error listing tickets', err);
+        res.status(500).send('Internal server error');
+    }
+};
+
+export const listTicketsByProvider = async (req: Request, res: Response) => {
+    const { provider } = req.query;
+    try {
+        let tickets = [];
+        if (provider === 'A') {
+            tickets = await userDAOPG.list_tickets();
+        } else if (provider === 'B') {
+            tickets = await userDAOMongoDB.list_tickets();
+        } else if (provider === 'C') {
+            tickets = await userDAOMARIA.list_tickets();
+        } else {
+            return res.status(400).send('Invalid provider');
+        }
+        res.json(tickets);
+    } catch (err) {
+        console.error('Error listing tickets by provider', err);
         res.status(500).send('Internal server error');
     }
 };

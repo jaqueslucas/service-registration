@@ -9,8 +9,8 @@ export class UserDAOPG implements UserDAO {
     private dbConfig = {
         user: 'postgres',
         host: 'localhost',
-        database: 'servicos_ti',
-        password: '4546',
+        database: 'servicedesk',
+        password: '123',
         port: 5432,
     };
 
@@ -24,7 +24,7 @@ export class UserDAOPG implements UserDAO {
             console.log('Successfully connected to the database');
             logger.info('Successfully connected to the PostgreSQL database');
             
-            const insertQuery = 'INSERT INTO tb_ticket(natureza, descricao, provedor) VALUES ($1, $2, $3)';
+            const insertQuery = 'INSERT INTO ticket(natureza, descricao, provedor) VALUES ($1, $2, $3)';
             await client.query(insertQuery, [natureza, descricao, provedor]);
             console.log('Data successfully inserted');
             logger.info(`Data successfully inserted: ${JSON.stringify(data)}`);

@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>Service Registration</h1>
+      <h1>Registros de Serviços</h1>
       <div class="form-container">
         <form id="ticket-form">
           <label for="natureza">Natureza</label>
@@ -29,11 +29,18 @@
             <option value="C">Provider C (MariaDB)</option>
           </select>
 
-          <button type="submit">Submit</button>
+          <button type="submit">Enviar</button>
         </form>
       </div>
       <div class="list-container">
-        <h2>Ticket List</h2>
+        <h2>Lista de Tickets</h2>
+        <label for="list-provider">Selecione o Provedor</label>
+        <select id="list-provider">
+          <option value="A">Provider A (PostgreSQL)</option>
+          <option value="B">Provider B (MongoDB)</option>
+          <option value="C">Provider C (MariaDB)</option>
+        </select>
+        <button id="list-tickets-button">Liste os Tickets</button>
         <ul id="ticket-list"></ul>
       </div>
     </div>
