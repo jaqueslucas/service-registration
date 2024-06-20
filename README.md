@@ -22,9 +22,9 @@ This project is a service registration application using a service-oriented arch
 1. **Install PostgreSQL**: Download and install PostgreSQL from the [official site](https://www.postgresql.org/download/).
 2. **Create Database and Table**:
    ```sql
-   CREATE DATABASE p3;
-   \c p3;
-   CREATE TABLE ticket (
+   CREATE DATABASE servicedesk;
+   \c servicedesk;
+   CREATE TABLE tb_ticket (
        id SERIAL PRIMARY KEY,
        natureza VARCHAR(255) NOT NULL,
        descricao TEXT NOT NULL,
@@ -42,7 +42,7 @@ This project is a service registration application using a service-oriented arch
    ```
 3. **Create Collection**:
    ```javascript
-   use p3;
+   use servicedesk;
    db.createCollection('ticket');
    ```
 
@@ -51,8 +51,8 @@ This project is a service registration application using a service-oriented arch
 1. **Install MariaDB**: Download and install MariaDB from the [official site](https://mariadb.org/download/).
 2. **Create Database and Table**:
    ```sql
-   CREATE DATABASE p3;
-   USE p3;
+   CREATE DATABASE servicedesk;
+   USE servicedesk;
    CREATE TABLE ticket (
        id INT AUTO_INCREMENT PRIMARY KEY,
        natureza VARCHAR(255) NOT NULL,
